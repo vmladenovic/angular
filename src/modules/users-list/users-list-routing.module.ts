@@ -11,6 +11,7 @@ const routes: Routes = [
       users: UsersResolver,
       paginationInfo: PaginationResolver
     },
+    runGuardsAndResolvers: 'paramsOrQueryParamsChange',
     component: UsersListComponent
   }
 ];
