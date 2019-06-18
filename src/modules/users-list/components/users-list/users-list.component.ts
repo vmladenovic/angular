@@ -24,6 +24,7 @@ export class UsersListComponent implements OnInit {
       map(data => data.users)
     )
       .subscribe((users: UserInterface[]) => {
+        console.log('Component list', users);
         this.userList = users;
       });
 
@@ -31,6 +32,7 @@ export class UsersListComponent implements OnInit {
       map(data => data.paginationInfo)
     )
       .subscribe(paginationInfo => {
+        console.log('PAGINATION INFO', paginationInfo.total);
         this.pagesCount = paginationInfo.total;
       });
   }

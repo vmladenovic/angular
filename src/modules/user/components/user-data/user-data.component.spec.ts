@@ -17,7 +17,7 @@ describe('UserDataComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [HttpModule, RouterTestingModule],
-      declarations: [UserComponent, UserDataComponent],
+      declarations: [UserDataComponent, UserComponent],
       providers: [ApiService, PaginationApiService, {
         provide: ActivatedRoute,
         useValue: {snapshot: {params: {'id': '123'}}},
@@ -30,7 +30,7 @@ describe('UserDataComponent', () => {
     fixture = TestBed.createComponent(UserDataComponent);
     fixtureUser = TestBed.createComponent(UserComponent);
     component = fixture.componentInstance;
-    componentUser = fixtureUser.componentInstance;
+    // componentUser = fixtureUser.componentInstance;
     fixture.detectChanges();
     fixtureUser.detectChanges();
   });
